@@ -10,7 +10,6 @@
 		77155C5C2656D1CF006E021F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155C5B2656D1CF006E021F /* AppDelegate.swift */; };
 		77155C5E2656D1CF006E021F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155C5D2656D1CF006E021F /* SceneDelegate.swift */; };
 		77155C602656D1CF006E021F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155C5F2656D1CF006E021F /* ViewController.swift */; };
-		77155C632656D1CF006E021F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77155C612656D1CF006E021F /* Main.storyboard */; };
 		77155C652656D1D0006E021F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77155C642656D1D0006E021F /* Assets.xcassets */; };
 		77155C682656D1D0006E021F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77155C662656D1D0006E021F /* LaunchScreen.storyboard */; };
 		77155C712656D1E6006E021F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 77155C702656D1E6006E021F /* .gitignore */; };
@@ -21,7 +20,6 @@
 		77155C5B2656D1CF006E021F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77155C5D2656D1CF006E021F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		77155C5F2656D1CF006E021F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		77155C622656D1CF006E021F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		77155C642656D1D0006E021F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77155C672656D1D0006E021F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77155C692656D1D0006E021F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,13 +59,20 @@
 			children = (
 				77155C5B2656D1CF006E021F /* AppDelegate.swift */,
 				77155C5D2656D1CF006E021F /* SceneDelegate.swift */,
+				77155C752656D288006E021F /* Assets */,
 				77155C5F2656D1CF006E021F /* ViewController.swift */,
-				77155C612656D1CF006E021F /* Main.storyboard */,
+			);
+			path = FindYourPet;
+			sourceTree = "<group>";
+		};
+		77155C752656D288006E021F /* Assets */ = {
+			isa = PBXGroup;
+			children = (
 				77155C642656D1D0006E021F /* Assets.xcassets */,
 				77155C662656D1D0006E021F /* LaunchScreen.storyboard */,
 				77155C692656D1D0006E021F /* Info.plist */,
 			);
-			path = FindYourPet;
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,7 +135,6 @@
 				77155C712656D1E6006E021F /* .gitignore in Resources */,
 				77155C682656D1D0006E021F /* LaunchScreen.storyboard in Resources */,
 				77155C652656D1D0006E021F /* Assets.xcassets in Resources */,
-				77155C632656D1CF006E021F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,14 +154,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		77155C612656D1CF006E021F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				77155C622656D1CF006E021F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		77155C662656D1D0006E021F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +288,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CDMM7YYVLS;
-				INFOPLIST_FILE = FindYourPet/Info.plist;
+				INFOPLIST_FILE = FindYourPet/Assets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,7 +307,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CDMM7YYVLS;
-				INFOPLIST_FILE = FindYourPet/Info.plist;
+				INFOPLIST_FILE = FindYourPet/Assets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
