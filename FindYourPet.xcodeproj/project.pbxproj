@@ -7,23 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23F3A2944C95F2587797DDCC /* Pods_FindYourPet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01D48A6BF0EC34F17F2D1768 /* Pods_FindYourPet.framework */; };
 		77155C5C2656D1CF006E021F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155C5B2656D1CF006E021F /* AppDelegate.swift */; };
 		77155C5E2656D1CF006E021F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155C5D2656D1CF006E021F /* SceneDelegate.swift */; };
-		77155C602656D1CF006E021F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155C5F2656D1CF006E021F /* ViewController.swift */; };
+		77155C602656D1CF006E021F /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155C5F2656D1CF006E021F /* LibraryViewController.swift */; };
 		77155C652656D1D0006E021F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77155C642656D1D0006E021F /* Assets.xcassets */; };
 		77155C682656D1D0006E021F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77155C662656D1D0006E021F /* LaunchScreen.storyboard */; };
 		77155C712656D1E6006E021F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 77155C702656D1E6006E021F /* .gitignore */; };
+		77155C7A2656D956006E021F /* SceneCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155C792656D956006E021F /* SceneCoordinatorType.swift */; };
+		77155C7D2656D993006E021F /* SceneTransitionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155C7C2656D993006E021F /* SceneTransitionType.swift */; };
+		77155C8226589BD8006E021F /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155C8126589BD8006E021F /* Scene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01D48A6BF0EC34F17F2D1768 /* Pods_FindYourPet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindYourPet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C9C525A28AA9BDE2EE494BB /* Pods-FindYourPet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindYourPet.release.xcconfig"; path = "Target Support Files/Pods-FindYourPet/Pods-FindYourPet.release.xcconfig"; sourceTree = "<group>"; };
 		77155C582656D1CF006E021F /* FindYourPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindYourPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77155C5B2656D1CF006E021F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77155C5D2656D1CF006E021F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		77155C5F2656D1CF006E021F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		77155C5F2656D1CF006E021F /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		77155C642656D1D0006E021F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77155C672656D1D0006E021F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77155C692656D1D0006E021F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77155C702656D1E6006E021F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		77155C792656D956006E021F /* SceneCoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinatorType.swift; sourceTree = "<group>"; };
+		77155C7C2656D993006E021F /* SceneTransitionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneTransitionType.swift; sourceTree = "<group>"; };
+		77155C8126589BD8006E021F /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		7E76F0DDEA5F9D87C00C4536 /* Pods-FindYourPet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindYourPet.debug.xcconfig"; path = "Target Support Files/Pods-FindYourPet/Pods-FindYourPet.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,18 +41,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23F3A2944C95F2587797DDCC /* Pods_FindYourPet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5662A4BB40C17E7C1C1F7FAE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7E76F0DDEA5F9D87C00C4536 /* Pods-FindYourPet.debug.xcconfig */,
+				1C9C525A28AA9BDE2EE494BB /* Pods-FindYourPet.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		77155C4F2656D1CF006E021F = {
 			isa = PBXGroup;
 			children = (
 				77155C702656D1E6006E021F /* .gitignore */,
 				77155C5A2656D1CF006E021F /* FindYourPet */,
 				77155C592656D1CF006E021F /* Products */,
+				5662A4BB40C17E7C1C1F7FAE /* Pods */,
+				884A818A626E8F3F6576DDF5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,9 +81,9 @@
 			isa = PBXGroup;
 			children = (
 				77155C5B2656D1CF006E021F /* AppDelegate.swift */,
-				77155C5D2656D1CF006E021F /* SceneDelegate.swift */,
+				77155C7F2656D9B7006E021F /* Scenes */,
 				77155C752656D288006E021F /* Assets */,
-				77155C5F2656D1CF006E021F /* ViewController.swift */,
+				775D9B3E2658C5FF004E9BED /* Controllers */,
 			);
 			path = FindYourPet;
 			sourceTree = "<group>";
@@ -75,6 +98,33 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		77155C7F2656D9B7006E021F /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				77155C8126589BD8006E021F /* Scene.swift */,
+				77155C5D2656D1CF006E021F /* SceneDelegate.swift */,
+				77155C792656D956006E021F /* SceneCoordinatorType.swift */,
+				77155C7C2656D993006E021F /* SceneTransitionType.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		775D9B3E2658C5FF004E9BED /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				77155C5F2656D1CF006E021F /* LibraryViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		884A818A626E8F3F6576DDF5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01D48A6BF0EC34F17F2D1768 /* Pods_FindYourPet.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,9 +132,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77155C6C2656D1D0006E021F /* Build configuration list for PBXNativeTarget "FindYourPet" */;
 			buildPhases = (
+				784C700A666B4AA3E54660CB /* [CP] Check Pods Manifest.lock */,
 				77155C542656D1CF006E021F /* Sources */,
 				77155C552656D1CF006E021F /* Frameworks */,
 				77155C562656D1CF006E021F /* Resources */,
+				D4AC02F77E532ABF170F75EE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -140,13 +192,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		784C700A666B4AA3E54660CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindYourPet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4AC02F77E532ABF170F75EE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindYourPet/Pods-FindYourPet-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindYourPet/Pods-FindYourPet-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindYourPet/Pods-FindYourPet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		77155C542656D1CF006E021F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77155C602656D1CF006E021F /* ViewController.swift in Sources */,
+				77155C602656D1CF006E021F /* LibraryViewController.swift in Sources */,
+				77155C7A2656D956006E021F /* SceneCoordinatorType.swift in Sources */,
+				77155C8226589BD8006E021F /* Scene.swift in Sources */,
 				77155C5C2656D1CF006E021F /* AppDelegate.swift in Sources */,
+				77155C7D2656D993006E021F /* SceneTransitionType.swift in Sources */,
 				77155C5E2656D1CF006E021F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +380,7 @@
 		};
 		77155C6D2656D1D0006E021F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E76F0DDEA5F9D87C00C4536 /* Pods-FindYourPet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +400,7 @@
 		};
 		77155C6E2656D1D0006E021F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C9C525A28AA9BDE2EE494BB /* Pods-FindYourPet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
