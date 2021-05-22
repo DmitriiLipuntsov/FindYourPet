@@ -7,6 +7,8 @@
 
 import Foundation
 
-protocol SceneTransitionType {
-    
+enum SceneTransitionType {
+  case root
+  case push
+  case modal
 }

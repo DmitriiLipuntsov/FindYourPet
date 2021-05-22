@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,13 @@
 		77155C7A2656D956006E021F /* SceneCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155C792656D956006E021F /* SceneCoordinatorType.swift */; };
 		77155C7D2656D993006E021F /* SceneTransitionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155C7C2656D993006E021F /* SceneTransitionType.swift */; };
 		77155C8226589BD8006E021F /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155C8126589BD8006E021F /* Scene.swift */; };
+		775D9B4F2658CE41004E9BED /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D9B4E2658CE41004E9BED /* LibraryViewModel.swift */; };
+		775D9B542658D362004E9BED /* WikiAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D9B532658D362004E9BED /* WikiAPIProtocol.swift */; };
+		775D9B622658D6A6004E9BED /* BreedLibraryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D9B612658D6A6004E9BED /* BreedLibraryItem.swift */; };
+		775D9B652658D946004E9BED /* BindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D9B642658D946004E9BED /* BindableType.swift */; };
+		775D9B6C26590FCD004E9BED /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D9B6B26590FCD004E9BED /* SceneCoordinator.swift */; };
+		775D9B7A26591808004E9BED /* UINavigationController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D9B7926591808004E9BED /* UINavigationController+Rx.swift */; };
+		775D9B7E26591C72004E9BED /* WikiAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D9B7D26591C72004E9BED /* WikiAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +40,13 @@
 		77155C792656D956006E021F /* SceneCoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinatorType.swift; sourceTree = "<group>"; };
 		77155C7C2656D993006E021F /* SceneTransitionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneTransitionType.swift; sourceTree = "<group>"; };
 		77155C8126589BD8006E021F /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		775D9B4E2658CE41004E9BED /* LibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
+		775D9B532658D362004E9BED /* WikiAPIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiAPIProtocol.swift; sourceTree = "<group>"; };
+		775D9B612658D6A6004E9BED /* BreedLibraryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedLibraryItem.swift; sourceTree = "<group>"; };
+		775D9B642658D946004E9BED /* BindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableType.swift; sourceTree = "<group>"; };
+		775D9B6B26590FCD004E9BED /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
+		775D9B7926591808004E9BED /* UINavigationController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Rx.swift"; sourceTree = "<group>"; };
+		775D9B7D26591C72004E9BED /* WikiAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiAPI.swift; sourceTree = "<group>"; };
 		7E76F0DDEA5F9D87C00C4536 /* Pods-FindYourPet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindYourPet.debug.xcconfig"; path = "Target Support Files/Pods-FindYourPet/Pods-FindYourPet.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,7 +68,6 @@
 				7E76F0DDEA5F9D87C00C4536 /* Pods-FindYourPet.debug.xcconfig */,
 				1C9C525A28AA9BDE2EE494BB /* Pods-FindYourPet.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,9 +94,14 @@
 			isa = PBXGroup;
 			children = (
 				77155C5B2656D1CF006E021F /* AppDelegate.swift */,
+				77155C5D2656D1CF006E021F /* SceneDelegate.swift */,
+				775D9B522658D331004E9BED /* Services */,
+				775D9B78265917F1004E9BED /* Extension */,
 				77155C7F2656D9B7006E021F /* Scenes */,
-				77155C752656D288006E021F /* Assets */,
+				775D9B5E2658D64C004E9BED /* Model */,
+				775D9B4D2658CDF4004E9BED /* ViewModels */,
 				775D9B3E2658C5FF004E9BED /* Controllers */,
+				77155C752656D288006E021F /* Assets */,
 			);
 			path = FindYourPet;
 			sourceTree = "<group>";
@@ -102,8 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				77155C8126589BD8006E021F /* Scene.swift */,
-				77155C5D2656D1CF006E021F /* SceneDelegate.swift */,
 				77155C792656D956006E021F /* SceneCoordinatorType.swift */,
+				775D9B6B26590FCD004E9BED /* SceneCoordinator.swift */,
 				77155C7C2656D993006E021F /* SceneTransitionType.swift */,
 			);
 			path = Scenes;
@@ -115,6 +133,48 @@
 				77155C5F2656D1CF006E021F /* LibraryViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		775D9B4D2658CDF4004E9BED /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				775D9B4E2658CE41004E9BED /* LibraryViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		775D9B522658D331004E9BED /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				775D9B82265920FD004E9BED /* WikiAPIService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		775D9B5E2658D64C004E9BED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				775D9B612658D6A6004E9BED /* BreedLibraryItem.swift */,
+				775D9B642658D946004E9BED /* BindableType.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		775D9B78265917F1004E9BED /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				775D9B7926591808004E9BED /* UINavigationController+Rx.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		775D9B82265920FD004E9BED /* WikiAPIService */ = {
+			isa = PBXGroup;
+			children = (
+				775D9B532658D362004E9BED /* WikiAPIProtocol.swift */,
+				775D9B7D26591C72004E9BED /* WikiAPI.swift */,
+			);
+			path = WikiAPIService;
 			sourceTree = "<group>";
 		};
 		884A818A626E8F3F6576DDF5 /* Frameworks */ = {
@@ -239,12 +299,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				775D9B4F2658CE41004E9BED /* LibraryViewModel.swift in Sources */,
 				77155C602656D1CF006E021F /* LibraryViewController.swift in Sources */,
+				775D9B542658D362004E9BED /* WikiAPIProtocol.swift in Sources */,
 				77155C7A2656D956006E021F /* SceneCoordinatorType.swift in Sources */,
+				775D9B652658D946004E9BED /* BindableType.swift in Sources */,
 				77155C8226589BD8006E021F /* Scene.swift in Sources */,
 				77155C5C2656D1CF006E021F /* AppDelegate.swift in Sources */,
+				775D9B7E26591C72004E9BED /* WikiAPI.swift in Sources */,
 				77155C7D2656D993006E021F /* SceneTransitionType.swift in Sources */,
 				77155C5E2656D1CF006E021F /* SceneDelegate.swift in Sources */,
+				775D9B7A26591808004E9BED /* UINavigationController+Rx.swift in Sources */,
+				775D9B622658D6A6004E9BED /* BreedLibraryItem.swift in Sources */,
+				775D9B6C26590FCD004E9BED /* SceneCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

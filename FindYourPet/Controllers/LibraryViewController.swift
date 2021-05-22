@@ -7,13 +7,17 @@
 
 import UIKit
 
-class LibraryViewController: UIViewController {
+class LibraryViewController: UIViewController, BindableType {
 
+    var viewModel: LibraryViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
     }
-
+    
+    func bindViewModel() {
+    }
 
 }
 

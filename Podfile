@@ -10,5 +10,10 @@ target 'FindYourPet' do
   # core RxSwift
   pod 'RxSwift', '6.1.0'
   pod 'RxCocoa', '6.1.0'
+  pod 'RxDataSources', '5.0.0'
+
+  # Realm database
+  pod 'RealmSwift', '10.7.4'
+  pod 'RxRealm', '5.0.1'
 
 end
