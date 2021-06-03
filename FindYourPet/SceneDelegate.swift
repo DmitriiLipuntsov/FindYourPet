@@ -13,7 +13,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        let service = 
+        let service =  WikiAPI()
+        let _ = service.fetchListOfBreeds(of: "dog").subscribe(onNext: { observer in
+            print("-----------_________---------",observer)
+        })
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = LibraryViewController()
         window?.makeKeyAndVisible()
