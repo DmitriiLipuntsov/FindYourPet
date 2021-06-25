@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RxSwift
 
 struct LibraryViewModel {
     
@@ -15,6 +16,10 @@ struct LibraryViewModel {
     init(breedsService: WikiAPIProtocol, coordinator: SceneCoordinatorType) {
       self.breedsService = breedsService
       self.sceneCoordinator = coordinator
+    }
+    
+    var listOfBreed: Observable<[String]> {
+        return self.breedsService.fetchListOfBreeds(of: "dog")
     }
     
 }

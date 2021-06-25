@@ -19,7 +19,6 @@
 		77155C8226589BD8006E021F /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155C8126589BD8006E021F /* Scene.swift */; };
 		775D9B4F2658CE41004E9BED /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D9B4E2658CE41004E9BED /* LibraryViewModel.swift */; };
 		775D9B542658D362004E9BED /* WikiAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D9B532658D362004E9BED /* WikiAPIProtocol.swift */; };
-		775D9B622658D6A6004E9BED /* BreedLibraryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D9B612658D6A6004E9BED /* BreedLibraryItem.swift */; };
 		775D9B652658D946004E9BED /* BindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D9B642658D946004E9BED /* BindableType.swift */; };
 		775D9B6C26590FCD004E9BED /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D9B6B26590FCD004E9BED /* SceneCoordinator.swift */; };
 		775D9B7A26591808004E9BED /* UINavigationController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D9B7926591808004E9BED /* UINavigationController+Rx.swift */; };
@@ -45,7 +44,6 @@
 		77155C8126589BD8006E021F /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		775D9B4E2658CE41004E9BED /* LibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
 		775D9B532658D362004E9BED /* WikiAPIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiAPIProtocol.swift; sourceTree = "<group>"; };
-		775D9B612658D6A6004E9BED /* BreedLibraryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedLibraryItem.swift; sourceTree = "<group>"; };
 		775D9B642658D946004E9BED /* BindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableType.swift; sourceTree = "<group>"; };
 		775D9B6B26590FCD004E9BED /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
 		775D9B7926591808004E9BED /* UINavigationController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Rx.swift"; sourceTree = "<group>"; };
@@ -160,7 +158,6 @@
 		775D9B5E2658D64C004E9BED /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				775D9B612658D6A6004E9BED /* BreedLibraryItem.swift */,
 				775D9B642658D946004E9BED /* BindableType.swift */,
 				775D9BA82663D823004E9BED /* ListOfBreedsModel.swift */,
 				775D9BB52668F6BC004E9BED /* BreedModel.swift */,
@@ -320,7 +317,6 @@
 				77155C5E2656D1CF006E021F /* SceneDelegate.swift in Sources */,
 				775D9BA92663D823004E9BED /* ListOfBreedsModel.swift in Sources */,
 				775D9B7A26591808004E9BED /* UINavigationController+Rx.swift in Sources */,
-				775D9B622658D6A6004E9BED /* BreedLibraryItem.swift in Sources */,
 				775D9BA6266126BA004E9BED /* WikiError.swift in Sources */,
 				775D9BB62668F6BC004E9BED /* BreedModel.swift in Sources */,
 				775D9B6C26590FCD004E9BED /* SceneCoordinator.swift in Sources */,
