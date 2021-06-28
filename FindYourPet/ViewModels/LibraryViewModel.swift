@@ -7,6 +7,9 @@
 
 import Foundation
 import RxSwift
+import RxDataSources
+
+typealias BreedSection = SectionModel<String, String>
 
 struct LibraryViewModel {
     
@@ -18,8 +21,11 @@ struct LibraryViewModel {
       self.sceneCoordinator = coordinator
     }
     
-    var listOfBreed: Observable<[String]> {
+    var listOfBreed: Observable<[BreedSection]> {
         return self.breedsService.fetchListOfBreeds(of: "dog")
+            .map { listOfBreed in
+                return [BreedSection(model: "", items: listOfBreed)]
+            }
     }
     
 }

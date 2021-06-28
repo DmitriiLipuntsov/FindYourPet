@@ -13,7 +13,8 @@ class LibraryViewController: UIViewController, BindableType {
 
     var viewModel: LibraryViewModel!
     
-    var dataSource: RxTableViewSectionedReloadDataSource<SectionModel<String,String>>!
+    private let disposeBag = DisposeBag()
+    private var dataSource: RxTableViewSectionedReloadDataSource<BreedSection>!
     
     private var tableView: UITableView!
     
@@ -26,19 +27,25 @@ class LibraryViewController: UIViewController, BindableType {
     
     func bindViewModel() {
         viewModel.listOfBreed
+            .bind(to: tableView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
     }
     
     private func createTableView() {
-        let tableView = UITableView()
+        tableView = UITableView()
         tableView.center = self.view.center
         view.addSubview(tableView)
         
-        let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, String>> { [weak self] dataSource, tableView, indexPath, item in
-            guard let self = self else { return UITableViewCell()}
+        let dataSource = RxTableViewSectionedReloadDataSource<BreedSection> { dataSource, tableView, indexPath, item in
             let cell = UITableViewCell()
-            cell.textLabel?.text = ""
+            cell.textLabel?.text = item
             return cell
         }
+        
+        self.dataSource = dataSource
+        tableView.rx
+            .setDelegate(self)
+            .disposed(by: disposeBag)
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -54,3 +61,9 @@ class LibraryViewController: UIViewController, BindableType {
 
 }
 
+//MARK: - UITableViewDelegate
+extension LibraryViewController: UITableViewDelegate {
+    
+    
+    
+}

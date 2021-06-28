@@ -22,7 +22,12 @@ class WikiAPI: WikiAPIProtocol {
         let params = "action=parse&format=json&page=List_of_\(list)_breeds&prop=links&section=1"
         
         let response: Observable<[String]> = request(parameters: params)
-        return response
+        let resp = response.map { listOfBreeds -> [String] in
+            var list = listOfBreeds
+            list.removeLast()
+            return list
+        }
+        return resp
     }
     
     func fetchBreed(of breed: String) -> Observable<Breed> {
