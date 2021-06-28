@@ -26,6 +26,8 @@
 		775D9BA6266126BA004E9BED /* WikiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D9BA5266126BA004E9BED /* WikiError.swift */; };
 		775D9BA92663D823004E9BED /* ListOfBreedsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D9BA82663D823004E9BED /* ListOfBreedsModel.swift */; };
 		775D9BB62668F6BC004E9BED /* BreedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D9BB52668F6BC004E9BED /* BreedModel.swift */; };
+		776CF5C12689F28700F97911 /* RootTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776CF5C02689F28700F97911 /* RootTabViewModel.swift */; };
+		776CF5C32689F2E800F97911 /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776CF5C22689F2E800F97911 /* RootTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,8 @@
 		775D9BA5266126BA004E9BED /* WikiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiError.swift; sourceTree = "<group>"; };
 		775D9BA82663D823004E9BED /* ListOfBreedsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfBreedsModel.swift; sourceTree = "<group>"; };
 		775D9BB52668F6BC004E9BED /* BreedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedModel.swift; sourceTree = "<group>"; };
+		776CF5C02689F28700F97911 /* RootTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabViewModel.swift; sourceTree = "<group>"; };
+		776CF5C22689F2E800F97911 /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
 		7E76F0DDEA5F9D87C00C4536 /* Pods-FindYourPet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindYourPet.debug.xcconfig"; path = "Target Support Files/Pods-FindYourPet/Pods-FindYourPet.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,6 +138,7 @@
 		775D9B3E2658C5FF004E9BED /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				776CF5C22689F2E800F97911 /* RootTabBarController.swift */,
 				77155C5F2656D1CF006E021F /* LibraryViewController.swift */,
 			);
 			path = Controllers;
@@ -142,6 +147,7 @@
 		775D9B4D2658CDF4004E9BED /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				776CF5C02689F28700F97911 /* RootTabViewModel.swift */,
 				775D9B4E2658CE41004E9BED /* LibraryViewModel.swift */,
 			);
 			path = ViewModels;
@@ -310,9 +316,11 @@
 				775D9B542658D362004E9BED /* WikiAPIProtocol.swift in Sources */,
 				77155C7A2656D956006E021F /* SceneCoordinatorType.swift in Sources */,
 				775D9B652658D946004E9BED /* BindableType.swift in Sources */,
+				776CF5C32689F2E800F97911 /* RootTabBarController.swift in Sources */,
 				77155C8226589BD8006E021F /* Scene.swift in Sources */,
 				77155C5C2656D1CF006E021F /* AppDelegate.swift in Sources */,
 				775D9B7E26591C72004E9BED /* WikiAPI.swift in Sources */,
+				776CF5C12689F28700F97911 /* RootTabViewModel.swift in Sources */,
 				77155C7D2656D993006E021F /* SceneTransitionType.swift in Sources */,
 				77155C5E2656D1CF006E021F /* SceneDelegate.swift in Sources */,
 				775D9BA92663D823004E9BED /* ListOfBreedsModel.swift in Sources */,

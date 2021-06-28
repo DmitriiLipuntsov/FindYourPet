@@ -19,9 +19,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let service =  WikiAPI()
         let sceneCoordinator = SceneCoordinator(window: window!)
+        
+        let rootTabBarViewModel = RootTabViewModel(sceneCoordinator: sceneCoordinator)
         let libraryViewModel = LibraryViewModel(breedsService: service, coordinator: sceneCoordinator)
-        let firstScene = Scene.library(libraryViewModel)
-        sceneCoordinator.transition(to: firstScene, type: .root)
+        let mainScene = Scene.mainTabBar(rootTabBarViewModel, libraryViewModel)
+        sceneCoordinator.transition(to: mainScene, type: .root)
     }
     
 }

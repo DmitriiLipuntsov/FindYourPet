@@ -21,9 +21,12 @@ class SceneCoordinator: SceneCoordinatorType {
 
   static func actualViewController(for viewController: UIViewController) -> UIViewController {
     if let navigationController = viewController as? UINavigationController {
-      return navigationController.viewControllers.first!
+        return SceneCoordinator.actualViewController(for: navigationController.viewControllers.first!)
+    } else if let tabBarController = viewController as? UITabBarController,
+              let selectedViewController = tabBarController.selectedViewController {
+        return SceneCoordinator.actualViewController(for: selectedViewController)
     } else {
-      return viewController
+        return viewController
     }
   }
 
