@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ListOfBreedsModel<Content: Decodable>: Decodable {
+struct ListOfBreedsModel<Content>: Decodable {
     
     let breeds: Content?
     var parse: Parse

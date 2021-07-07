@@ -10,23 +10,33 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-typealias JSONObject = [String: Any]
-
 class WikiAPI: WikiAPIProtocol {
     
     private var baseURL: String {
         return "https://en.wikipedia.org/w/api.php?"
     }
     
-    func fetchListOfBreeds(of list: String) -> Observable<[String]> {
+    func fetchBreeds() -> Observable<[Breed]> {
+        return fetchListOfBreeds(of: "dog")
+            .map { nameBreed -> Observable<Breed> in
+                if nameBreed == "Cursinu" {
+                    let name = "Corsican%20Dog"
+                    return self.fetchBreed(of: name)
+                } else if nameBreed == "Mucuchies" {
+                    return Observable.of(Breed(title: "Mucuchies", thumbnail: Thumbnail(source: "https://en.wikipedia.org/wiki/Livestock_guardian_dog#/media/File:Mucuchies_natural_habitat.jpg"), extract: "No description"))
+                }
+                return  self.fetchBreed(of: nameBreed) }
+            .merge()
+            .toArray()
+            .asObservable()
+    }
+    
+    func fetchListOfBreeds(of list: String) -> Observable<String> {
         let params = "action=parse&format=json&page=List_of_\(list)_breeds&prop=links&section=1"
-        
         let response: Observable<[String]> = request(parameters: params)
-        let resp = response.map { listOfBreeds -> [String] in
-            var list = listOfBreeds
-            list.removeLast()
-            return list
-        }
+        let resp = response
+            .map { Observable<String>.from($0) }
+            .merge()
         return resp
     }
     
@@ -74,8 +84,5 @@ class WikiAPI: WikiAPIProtocol {
         catch {
             return Observable.empty()
         }
-        
-        
     }
-    
 }

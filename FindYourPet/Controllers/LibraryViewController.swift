@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxDataSources
+import Kingfisher
 
 class LibraryViewController: UIViewController, BindableType {
 
@@ -36,10 +37,15 @@ class LibraryViewController: UIViewController, BindableType {
         tableView = UITableView()
         tableView.center = self.view.center
         view.addSubview(tableView)
-        
+        var a = 0
         let dataSource = RxTableViewSectionedReloadDataSource<BreedSection> { dataSource, tableView, indexPath, item in
             let cell = UITableViewCell()
-            cell.textLabel?.text = item
+            a += 1
+            cell.textLabel?.text = item.title
+            if let sourceImage = item.thumbnail?.source {
+                cell.imageView?.kf.setImage(with: URL(string: sourceImage), placeholder: UIImage(named: "blank-avatar"))
+            }
+            print(a)
             return cell
         }
         
@@ -59,7 +65,6 @@ class LibraryViewController: UIViewController, BindableType {
     }
     
     
-
 }
 
 //MARK: - UITableViewDelegate

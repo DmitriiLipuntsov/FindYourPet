@@ -7,6 +7,8 @@ target 'FindYourPet' do
 
   # Pods for FindYourPet
 
+  pod 'Kingfisher'
+
   # core RxSwift
   pod 'RxSwift', '6.1.0'
   pod 'RxCocoa', '6.1.0'

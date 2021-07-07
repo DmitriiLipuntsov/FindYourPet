@@ -18,28 +18,23 @@ struct BreedModel<Content: Decodable>: Decodable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         query = try container.decode(Query.self, forKey: .query)
-        breed = query.pages.breed as? Content
+        let pages = [Breed](query.pages.values)
+        if pages.count != 1 {
+            print("Found more than one page for the request")
+        }
+        self.breed = pages[0] as? Content
     }
 }
 
 // MARK: - Query
 struct Query: Codable {
-    let pages: PageId
-}
-
-// MARK: - PageId
-struct PageId: Codable {
-    let breed: Breed
-
-    enum CodingKeys: String, CodingKey {
-        case breed = "273885"
-    }
+    let pages: [String : Breed]
 }
 
 // MARK: - Page
 struct Breed: Codable {
     let title: String
-    let thumbnail: Thumbnail
+    let thumbnail: Thumbnail?
     let extract: String
 }
 

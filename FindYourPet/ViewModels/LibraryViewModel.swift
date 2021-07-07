@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import RxDataSources
 
-typealias BreedSection = SectionModel<String, String>
+typealias BreedSection = SectionModel<String, Breed>
 
 struct LibraryViewModel {
     
@@ -22,10 +22,10 @@ struct LibraryViewModel {
     }
     
     var listOfBreed: Observable<[BreedSection]> {
-        return self.breedsService.fetchListOfBreeds(of: "dog")
-            .map { listOfBreed in
-                return [BreedSection(model: "", items: listOfBreed)]
-            }
-    }
-    
+        return self.breedsService.fetchBreeds()
+            .map({ breeds -> [BreedSection] in
+                print(breeds)
+                return [BreedSection(model: "", items: breeds)]
+            })
+        }
 }

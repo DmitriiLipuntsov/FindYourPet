@@ -9,5 +9,5 @@ import Foundation
 import RxSwift
 
 protocol WikiAPIProtocol {
-    func fetchListOfBreeds(of list: String) -> Observable<[String]>
+    func fetchBreeds() -> Observable<[Breed]>
 }
