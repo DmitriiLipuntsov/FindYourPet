@@ -15,17 +15,15 @@ class WikiAPI: WikiAPIProtocol {
     private var baseURL: String {
         return "https://en.wikipedia.org/w/api.php?"
     }
-    
+
     func fetchBreeds() -> Observable<[Breed]> {
         return fetchListOfBreeds(of: "dog")
             .map { nameBreed -> Observable<Breed> in
-                if nameBreed == "Cursinu" {
-                    let name = "Corsican%20Dog"
-                    return self.fetchBreed(of: name)
-                } else if nameBreed == "Mucuchies" {
+                if nameBreed == "Mucuchies" {
                     return Observable.of(Breed(title: "Mucuchies", thumbnail: Thumbnail(source: "https://en.wikipedia.org/wiki/Livestock_guardian_dog#/media/File:Mucuchies_natural_habitat.jpg"), extract: "No description"))
                 }
-                return  self.fetchBreed(of: nameBreed) }
+                let formattedBreedName = nameBreed.safeNameBreedForUrl
+                return  self.fetchBreed(of: formattedBreedName) }
             .merge()
             .toArray()
             .asObservable()
@@ -54,6 +52,7 @@ class WikiAPI: WikiAPIProtocol {
             guard
                 let url = URL(string: stringURL)
             else {
+                fatalError("Invalid url") //MARK: - temporary
                 throw WikiError.invalidURL(baseURL)
             }
             
@@ -65,18 +64,21 @@ class WikiAPI: WikiAPIProtocol {
                         if parameters.hasPrefix("action=parse") {
                             let list = try JSONDecoder().decode(ListOfBreedsModel<T>.self, from: data)
                             guard let breeds = list.breeds else {
+                                fatalError("Invalid decoder configuration. No breeds list found.") //MARK: - temporary
                                 throw WikiError.invalidDecoderConfiguration
                             }
                             return breeds
                         } else {
                             let object = try JSONDecoder().decode(BreedModel<T>.self, from: data)
                             guard let breed = object.breed else {
+                                fatalError("Invalid decoder configuration. Breed no found.") //MARK: - temporary
                                 throw WikiError.invalidDecoderConfiguration
                             }
                             return breed
                         }
                     }
                     catch {
+                        fatalError("Invalid decoder configuration") //MARK: - temporary
                         throw WikiError.invalidDecoderConfiguration
                     }
                 }

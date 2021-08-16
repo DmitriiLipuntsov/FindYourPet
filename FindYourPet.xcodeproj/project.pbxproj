@@ -17,6 +17,8 @@
 		77155C7A2656D956006E021F /* SceneCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155C792656D956006E021F /* SceneCoordinatorType.swift */; };
 		77155C7D2656D993006E021F /* SceneTransitionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155C7C2656D993006E021F /* SceneTransitionType.swift */; };
 		77155C8226589BD8006E021F /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155C8126589BD8006E021F /* Scene.swift */; };
+		7754A2F926C93E370087908E /* BreedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7754A2F826C93E370087908E /* BreedCollectionViewCell.swift */; };
+		7754A31E26C990A40087908E /* StringWikiApiExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7754A31D26C990A40087908E /* StringWikiApiExtension.swift */; };
 		775D9B4F2658CE41004E9BED /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D9B4E2658CE41004E9BED /* LibraryViewModel.swift */; };
 		775D9B542658D362004E9BED /* WikiAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D9B532658D362004E9BED /* WikiAPIProtocol.swift */; };
 		775D9B652658D946004E9BED /* BindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D9B642658D946004E9BED /* BindableType.swift */; };
@@ -44,6 +46,8 @@
 		77155C792656D956006E021F /* SceneCoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinatorType.swift; sourceTree = "<group>"; };
 		77155C7C2656D993006E021F /* SceneTransitionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneTransitionType.swift; sourceTree = "<group>"; };
 		77155C8126589BD8006E021F /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		7754A2F826C93E370087908E /* BreedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedCollectionViewCell.swift; sourceTree = "<group>"; };
+		7754A31D26C990A40087908E /* StringWikiApiExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringWikiApiExtension.swift; sourceTree = "<group>"; };
 		775D9B4E2658CE41004E9BED /* LibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
 		775D9B532658D362004E9BED /* WikiAPIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiAPIProtocol.swift; sourceTree = "<group>"; };
 		775D9B642658D946004E9BED /* BindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableType.swift; sourceTree = "<group>"; };
@@ -135,11 +139,28 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
+		7754A31C26C9903D0087908E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7754A31D26C990A40087908E /* StringWikiApiExtension.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7754A31F26CA6E830087908E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7754A2F826C93E370087908E /* BreedCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		775D9B3E2658C5FF004E9BED /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				776CF5C22689F2E800F97911 /* RootTabBarController.swift */,
 				77155C5F2656D1CF006E021F /* LibraryViewController.swift */,
+				7754A31F26CA6E830087908E /* Cells */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -156,6 +177,7 @@
 		775D9B522658D331004E9BED /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				7754A31C26C9903D0087908E /* Helpers */,
 				775D9B82265920FD004E9BED /* WikiAPIService */,
 			);
 			path = Services;
@@ -320,6 +342,8 @@
 				77155C8226589BD8006E021F /* Scene.swift in Sources */,
 				77155C5C2656D1CF006E021F /* AppDelegate.swift in Sources */,
 				775D9B7E26591C72004E9BED /* WikiAPI.swift in Sources */,
+				7754A2F926C93E370087908E /* BreedCollectionViewCell.swift in Sources */,
+				7754A31E26C990A40087908E /* StringWikiApiExtension.swift in Sources */,
 				776CF5C12689F28700F97911 /* RootTabViewModel.swift in Sources */,
 				77155C7D2656D993006E021F /* SceneTransitionType.swift in Sources */,
 				77155C5E2656D1CF006E021F /* SceneDelegate.swift in Sources */,

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct BreedModel<Content: Decodable>: Decodable {
+struct BreedModel<Content>: Decodable {
     let breed: Content?
     let query: Query
     
@@ -20,7 +20,7 @@ struct BreedModel<Content: Decodable>: Decodable {
         query = try container.decode(Query.self, forKey: .query)
         let pages = [Breed](query.pages.values)
         if pages.count != 1 {
-            print("Found more than one page for the request")
+            fatalError("Found more than one page for the request") // сделал временно чтобы точно знать когда значений приходит больше одного
         }
         self.breed = pages[0] as? Content
     }
@@ -32,10 +32,18 @@ struct Query: Codable {
 }
 
 // MARK: - Page
-struct Breed: Codable {
+struct Breed: Codable, Comparable {
     let title: String
     let thumbnail: Thumbnail?
     let extract: String
+    
+    static func < (lhs: Breed, rhs: Breed) -> Bool {
+        return lhs.title < rhs.title
+    }
+    
+    static func == (lhs: Breed, rhs: Breed) -> Bool {
+        return lhs.title == rhs.title
+    }
 }
 
 // MARK: - Thumbnail

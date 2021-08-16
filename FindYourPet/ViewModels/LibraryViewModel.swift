@@ -24,8 +24,8 @@ struct LibraryViewModel {
     var listOfBreed: Observable<[BreedSection]> {
         return self.breedsService.fetchBreeds()
             .map({ breeds -> [BreedSection] in
-                print(breeds)
-                return [BreedSection(model: "", items: breeds)]
+                let sortBreeds = breeds.sorted()
+                return [BreedSection(model: "", items: sortBreeds)]
             })
         }
 }
