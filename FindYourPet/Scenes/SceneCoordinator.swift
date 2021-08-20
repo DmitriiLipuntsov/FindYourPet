@@ -52,11 +52,10 @@ class SceneCoordinator: SceneCoordinatorType {
         currentViewController = SceneCoordinator.actualViewController(for: viewController)
 
       case .modal:
-        viewController.modalPresentationStyle = .fullScreen
+        viewController.modalPresentationStyle = .automatic
         currentViewController.present(viewController, animated: true) {
           subject.onCompleted()
         }
-        currentViewController = SceneCoordinator.actualViewController(for: viewController)
     }
     return subject.asObservable()
         .take(1)

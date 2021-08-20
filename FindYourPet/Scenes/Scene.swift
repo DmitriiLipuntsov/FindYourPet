@@ -15,6 +15,7 @@ enum Scene {
     case search
     case account
     case library(LibraryViewModel)
+    case descriptionBreed(DescriptionBreedViewModel)
     
 }
 
@@ -46,6 +47,10 @@ extension Scene {
         vc.bindViewModel(to: viewModel)
         let nc = UINavigationController(rootViewController: vc)
         return nc
+    case .descriptionBreed(let viewModel):
+        let vc = DescriptionBreedViewController()
+        vc.bindViewModel(to: viewModel)
+        return vc
     }
     return UIViewController()
   }

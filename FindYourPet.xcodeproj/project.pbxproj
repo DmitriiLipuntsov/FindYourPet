@@ -19,6 +19,7 @@
 		77155C8226589BD8006E021F /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77155C8126589BD8006E021F /* Scene.swift */; };
 		7754A2F926C93E370087908E /* BreedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7754A2F826C93E370087908E /* BreedCollectionViewCell.swift */; };
 		7754A31E26C990A40087908E /* StringWikiApiExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7754A31D26C990A40087908E /* StringWikiApiExtension.swift */; };
+		7754A32126CC270F0087908E /* DescriptionBreedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7754A32026CC270F0087908E /* DescriptionBreedViewController.swift */; };
 		775D9B4F2658CE41004E9BED /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D9B4E2658CE41004E9BED /* LibraryViewModel.swift */; };
 		775D9B542658D362004E9BED /* WikiAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D9B532658D362004E9BED /* WikiAPIProtocol.swift */; };
 		775D9B652658D946004E9BED /* BindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D9B642658D946004E9BED /* BindableType.swift */; };
@@ -30,6 +31,7 @@
 		775D9BB62668F6BC004E9BED /* BreedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D9BB52668F6BC004E9BED /* BreedModel.swift */; };
 		776CF5C12689F28700F97911 /* RootTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776CF5C02689F28700F97911 /* RootTabViewModel.swift */; };
 		776CF5C32689F2E800F97911 /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776CF5C22689F2E800F97911 /* RootTabBarController.swift */; };
+		77C1E88F26D00C6C006CD85D /* DescriptionBreedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C1E88E26D00C6C006CD85D /* DescriptionBreedViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,7 @@
 		77155C8126589BD8006E021F /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		7754A2F826C93E370087908E /* BreedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedCollectionViewCell.swift; sourceTree = "<group>"; };
 		7754A31D26C990A40087908E /* StringWikiApiExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringWikiApiExtension.swift; sourceTree = "<group>"; };
+		7754A32026CC270F0087908E /* DescriptionBreedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionBreedViewController.swift; sourceTree = "<group>"; };
 		775D9B4E2658CE41004E9BED /* LibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
 		775D9B532658D362004E9BED /* WikiAPIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiAPIProtocol.swift; sourceTree = "<group>"; };
 		775D9B642658D946004E9BED /* BindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableType.swift; sourceTree = "<group>"; };
@@ -59,6 +62,7 @@
 		775D9BB52668F6BC004E9BED /* BreedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedModel.swift; sourceTree = "<group>"; };
 		776CF5C02689F28700F97911 /* RootTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabViewModel.swift; sourceTree = "<group>"; };
 		776CF5C22689F2E800F97911 /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
+		77C1E88E26D00C6C006CD85D /* DescriptionBreedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionBreedViewModel.swift; sourceTree = "<group>"; };
 		7E76F0DDEA5F9D87C00C4536 /* Pods-FindYourPet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindYourPet.debug.xcconfig"; path = "Target Support Files/Pods-FindYourPet/Pods-FindYourPet.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,6 +164,7 @@
 			children = (
 				776CF5C22689F2E800F97911 /* RootTabBarController.swift */,
 				77155C5F2656D1CF006E021F /* LibraryViewController.swift */,
+				7754A32026CC270F0087908E /* DescriptionBreedViewController.swift */,
 				7754A31F26CA6E830087908E /* Cells */,
 			);
 			path = Controllers;
@@ -170,6 +175,7 @@
 			children = (
 				776CF5C02689F28700F97911 /* RootTabViewModel.swift */,
 				775D9B4E2658CE41004E9BED /* LibraryViewModel.swift */,
+				77C1E88E26D00C6C006CD85D /* DescriptionBreedViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -341,6 +347,7 @@
 				776CF5C32689F2E800F97911 /* RootTabBarController.swift in Sources */,
 				77155C8226589BD8006E021F /* Scene.swift in Sources */,
 				77155C5C2656D1CF006E021F /* AppDelegate.swift in Sources */,
+				7754A32126CC270F0087908E /* DescriptionBreedViewController.swift in Sources */,
 				775D9B7E26591C72004E9BED /* WikiAPI.swift in Sources */,
 				7754A2F926C93E370087908E /* BreedCollectionViewCell.swift in Sources */,
 				7754A31E26C990A40087908E /* StringWikiApiExtension.swift in Sources */,
@@ -351,6 +358,7 @@
 				775D9B7A26591808004E9BED /* UINavigationController+Rx.swift in Sources */,
 				775D9BA6266126BA004E9BED /* WikiError.swift in Sources */,
 				775D9BB62668F6BC004E9BED /* BreedModel.swift in Sources */,
+				77C1E88F26D00C6C006CD85D /* DescriptionBreedViewModel.swift in Sources */,
 				775D9B6C26590FCD004E9BED /* SceneCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

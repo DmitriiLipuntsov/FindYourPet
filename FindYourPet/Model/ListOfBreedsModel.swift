@@ -20,7 +20,7 @@ struct ListOfBreedsModel<Content>: Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         parse = try container.decode(Parse.self, forKey: .parse)
         var breedsModel = try container.decode(Parse.self, forKey: .parse).links
-        breedsModel.removeLast()
+        breedsModel.removeLast(2)
         breeds = breedsModel.compactMap({ $0.breedName }) as? Content
     }
 }
