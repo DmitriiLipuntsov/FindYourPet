@@ -8,7 +8,6 @@
 import UIKit
 import RxSwift
 import RxDataSources
-import Kingfisher
 
 class LibraryViewController: UIViewController, BindableType {
     
@@ -136,14 +135,7 @@ extension LibraryViewController {
     private func getDataSource() -> RxCollectionViewSectionedReloadDataSource<BreedSection> {
         let dataSource = RxCollectionViewSectionedReloadDataSource<BreedSection> { dataSource, collectionView, indexPath, item in
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BreedCollectionViewCell.cellIdentifier, for: indexPath) as? BreedCollectionViewCell else { return UICollectionViewCell() }
-            cell.breedNameLabel.text = item.title
-            if item.title == "Paisley Terrier" {
-                print(item.title)
-                print(item.thumbnail)
-            }
-            if let sourceImage = item.thumbnail?.source {
-                cell.breedImageView.kf.setImage(with: URL(string: sourceImage), placeholder: UIImage(named: "unknownDog"))
-            }
+            cell.configure(for: item)
             return cell
         }
         

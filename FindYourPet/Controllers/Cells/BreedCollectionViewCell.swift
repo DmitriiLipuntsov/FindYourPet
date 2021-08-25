@@ -6,19 +6,21 @@
 //
 
 import UIKit
+import Kingfisher
 
 class BreedCollectionViewCell: UICollectionViewCell {
     
     static let cellIdentifier = "cellForBreed"
     
-    var breedImageView: UIImageView = {
+    private var breedImageView: UIImageView = {
         let imageView = UIImageView()
+        imageView.image = UIImage(named: "unknownDog")
         imageView.isOpaque = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
-    var breedNameLabel: UILabel = {
+    private var breedNameLabel: UILabel = {
         let label = UILabel()
         label.text = "Breed name"
         label.font = .boldSystemFont(ofSize: 20)
@@ -40,9 +42,24 @@ class BreedCollectionViewCell: UICollectionViewCell {
         setConstraints()
     }
     
+    func configure(for breed: Breed) {
+        if let sourceImage = breed.thumbnail?.source, let url = URL(string: sourceImage) {
+            breedImageView.kf.setImage(with: url)
+        } else {
+            print("Source image for breed: \(breed.title) not found")
+        }
+        
+        breedNameLabel.text = breed.title
+        
+    }
     
+    override func prepareForReuse() {
+        breedImageView.image = UIImage(named: "unknownDog")
+        breedNameLabel.text = "Breed name"
+        super.prepareForReuse()
+    }
     
-    func setConstraints() {
+    private func setConstraints() {
         // breedImageView
         NSLayoutConstraint.activate([
             breedImageView.topAnchor.constraint(equalTo: topAnchor, constant: 0),
