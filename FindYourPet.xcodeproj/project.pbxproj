@@ -27,11 +27,11 @@
 		775D9B7A26591808004E9BED /* UINavigationController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D9B7926591808004E9BED /* UINavigationController+Rx.swift */; };
 		775D9B7E26591C72004E9BED /* WikiAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D9B7D26591C72004E9BED /* WikiAPI.swift */; };
 		775D9BA6266126BA004E9BED /* WikiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D9BA5266126BA004E9BED /* WikiError.swift */; };
-		775D9BA92663D823004E9BED /* ListOfBreedsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D9BA82663D823004E9BED /* ListOfBreedsModel.swift */; };
 		775D9BB62668F6BC004E9BED /* BreedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D9BB52668F6BC004E9BED /* BreedModel.swift */; };
 		776CF5C12689F28700F97911 /* RootTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776CF5C02689F28700F97911 /* RootTabViewModel.swift */; };
 		776CF5C32689F2E800F97911 /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776CF5C22689F2E800F97911 /* RootTabBarController.swift */; };
 		77C1E88F26D00C6C006CD85D /* DescriptionBreedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C1E88E26D00C6C006CD85D /* DescriptionBreedViewModel.swift */; };
+		77C1E8BE26DA6FB3006CD85D /* ListOfBreedsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C1E8BD26DA6FB3006CD85D /* ListOfBreedsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,11 +58,11 @@
 		775D9B7926591808004E9BED /* UINavigationController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Rx.swift"; sourceTree = "<group>"; };
 		775D9B7D26591C72004E9BED /* WikiAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiAPI.swift; sourceTree = "<group>"; };
 		775D9BA5266126BA004E9BED /* WikiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiError.swift; sourceTree = "<group>"; };
-		775D9BA82663D823004E9BED /* ListOfBreedsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfBreedsModel.swift; sourceTree = "<group>"; };
 		775D9BB52668F6BC004E9BED /* BreedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedModel.swift; sourceTree = "<group>"; };
 		776CF5C02689F28700F97911 /* RootTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabViewModel.swift; sourceTree = "<group>"; };
 		776CF5C22689F2E800F97911 /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
 		77C1E88E26D00C6C006CD85D /* DescriptionBreedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionBreedViewModel.swift; sourceTree = "<group>"; };
+		77C1E8BD26DA6FB3006CD85D /* ListOfBreedsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfBreedsModel.swift; sourceTree = "<group>"; };
 		7E76F0DDEA5F9D87C00C4536 /* Pods-FindYourPet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindYourPet.debug.xcconfig"; path = "Target Support Files/Pods-FindYourPet/Pods-FindYourPet.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,8 +193,6 @@
 			isa = PBXGroup;
 			children = (
 				775D9B642658D946004E9BED /* BindableType.swift */,
-				775D9BA82663D823004E9BED /* ListOfBreedsModel.swift */,
-				775D9BB52668F6BC004E9BED /* BreedModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -210,11 +208,21 @@
 		775D9B82265920FD004E9BED /* WikiAPIService */ = {
 			isa = PBXGroup;
 			children = (
+				77C1E8BC26DA6F79006CD85D /* Models */,
 				775D9B532658D362004E9BED /* WikiAPIProtocol.swift */,
 				775D9B7D26591C72004E9BED /* WikiAPI.swift */,
 				775D9BA5266126BA004E9BED /* WikiError.swift */,
 			);
 			path = WikiAPIService;
+			sourceTree = "<group>";
+		};
+		77C1E8BC26DA6F79006CD85D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				77C1E8BD26DA6FB3006CD85D /* ListOfBreedsModel.swift */,
+				775D9BB52668F6BC004E9BED /* BreedModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		884A818A626E8F3F6576DDF5 /* Frameworks */ = {
@@ -354,7 +362,7 @@
 				776CF5C12689F28700F97911 /* RootTabViewModel.swift in Sources */,
 				77155C7D2656D993006E021F /* SceneTransitionType.swift in Sources */,
 				77155C5E2656D1CF006E021F /* SceneDelegate.swift in Sources */,
-				775D9BA92663D823004E9BED /* ListOfBreedsModel.swift in Sources */,
+				77C1E8BE26DA6FB3006CD85D /* ListOfBreedsModel.swift in Sources */,
 				775D9B7A26591808004E9BED /* UINavigationController+Rx.swift in Sources */,
 				775D9BA6266126BA004E9BED /* WikiError.swift in Sources */,
 				775D9BB62668F6BC004E9BED /* BreedModel.swift in Sources */,
