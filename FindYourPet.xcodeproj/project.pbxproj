@@ -90,6 +90,7 @@
 		77155C4F2656D1CF006E021F = {
 			isa = PBXGroup;
 			children = (
+				77C1E8C326DC19A7006CD85D /* Images */,
 				77155C702656D1E6006E021F /* .gitignore */,
 				77155C5A2656D1CF006E021F /* FindYourPet */,
 				77155C592656D1CF006E021F /* Products */,
@@ -223,6 +224,13 @@
 				775D9BB52668F6BC004E9BED /* BreedModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		77C1E8C326DC19A7006CD85D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		884A818A626E8F3F6576DDF5 /* Frameworks */ = {

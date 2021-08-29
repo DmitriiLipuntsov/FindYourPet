@@ -21,6 +21,13 @@ class DescriptionBreedViewController: UIViewController, BindableType {
         return imageView
     }()
     
+    private var scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.contentMode = .bottom
+        return scrollView
+    }()
+    
     var breedNameLabel: UILabel = {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 40)
@@ -46,8 +53,13 @@ class DescriptionBreedViewController: UIViewController, BindableType {
         view.backgroundColor = .white
         view.addSubview(breedImageView)
         view.addSubview(breedNameLabel)
-        view.addSubview(descriptionLabel)
+        view.addSubview(scrollView)
+        scrollView.addSubview(descriptionLabel)
         
+        scrollView.contentSize = CGSize(
+            width: view.frame.width - 60,
+            height: breedNameLabel.frame.height)
+
         setConstraints()
     }
     
@@ -80,12 +92,19 @@ extension DescriptionBreedViewController {
             breedNameLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -30)
         ])
         
+        // scrollView
+        NSLayoutConstraint.activate([
+            scrollView.topAnchor.constraint(equalTo: breedNameLabel.bottomAnchor, constant: 30),
+            scrollView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 30),
+            scrollView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -30),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -30)
+        ])
+        
         // descriptionLabel
         NSLayoutConstraint.activate([
-            descriptionLabel.topAnchor.constraint(equalTo: breedNameLabel.bottomAnchor, constant: 30),
-            descriptionLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 30),
-            descriptionLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -30),
-            descriptionLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -30)
+            descriptionLabel.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            descriptionLabel.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+            descriptionLabel.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
         ])
     }
     

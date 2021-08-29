@@ -32,7 +32,7 @@ struct Query: Codable {
 }
 
 // MARK: - Page
-struct Breed: Codable, Comparable {
+struct Breed: Codable, Comparable, Hashable {
     let title: String
     let thumbnail: Thumbnail?
     let extract: String
@@ -47,6 +47,6 @@ struct Breed: Codable, Comparable {
 }
 
 // MARK: - Thumbnail
-struct Thumbnail: Codable {
+struct Thumbnail: Codable, Hashable {
     let source: String
 }

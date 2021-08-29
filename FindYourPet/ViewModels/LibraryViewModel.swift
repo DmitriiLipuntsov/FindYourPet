@@ -32,7 +32,7 @@ class LibraryViewModel {
     
     private func getBreedsSection() {
         breedsService.fetchBreeds().subscribe(onNext: { breeds in
-            let sortBreeds = breeds.sorted()
+            let sortBreeds = Array(Set(breeds)).sorted()
             self.allBreeds.append(contentsOf: sortBreeds)
             self.sortedBreeds.append(contentsOf: sortBreeds)
             self.searchBreed.onNext([BreedSection(model: "", items: sortBreeds)])

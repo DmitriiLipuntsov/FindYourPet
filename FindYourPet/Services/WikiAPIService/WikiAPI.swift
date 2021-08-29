@@ -40,7 +40,7 @@ class WikiAPI: WikiAPIProtocol {
     }
     
     private func getBreed(by id: Int) -> Observable<Breed> {
-        let params = "action=query&format=json&prop=pageimages%7Cextracts&pageids=\(id)&piprop=name%7Cthumbnail&pithumbsize=300&explaintext=1"
+        let params = "action=query&format=json&prop=pageimages%7Cextracts&pageids=\(id)&piprop=name%7Cthumbnail&pithumbsize=300&redirects=1&explaintext=1&exsectionformat=plain"
         let response: Observable<Breed> = request(parameters: params)
         return response
     }
